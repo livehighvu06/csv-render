@@ -5,7 +5,7 @@ print(path)
 
 ##############  請先輸入   ##############
 weight = '3kg'
-date ='3/1～3/10'
+date ='3/11～3/20'
 
 file = open(f'{path}\{weight}.csv',encoding='UTF-8')
 test = []
@@ -62,6 +62,9 @@ for (index , i) in enumerate(result):
     """
     index+=1
 
+
+
+indexSP = 0
 # SP
 for i in resultSP:
     flavor = i[0]
@@ -81,7 +84,7 @@ for i in resultSP:
         <tr>
             <td width="48%">
                 <a href="{url}">
-                    <img src="https://image.rakuten.co.jp/x-plosion/cabinet/category_ranking/r{index +1}.jpg" width="100%" />
+                    <img src="https://image.rakuten.co.jp/x-plosion/cabinet/category_ranking/r{indexSP +1}.jpg" width="100%" />
                     <img src="{image}" width="100%" />
                     <font color="#000">
                         プロテイン<br>{flavor}<br>{weight}<br>
@@ -93,7 +96,7 @@ for i in resultSP:
             <td width="4%"></td>
             <td width="48%">
                 <a href="{url2}">
-                    <img src="https://image.rakuten.co.jp/x-plosion/cabinet/category_ranking/r{index +2}.jpg" width="100%" />
+                    <img src="https://image.rakuten.co.jp/x-plosion/cabinet/category_ranking/r{indexSP +2}.jpg" width="100%" />
                     <img src="{image2}" width="100%" />
                     <font color="#000">
                         プロテイン<br>{flavor2}<br>{weight}<br>
@@ -112,12 +115,10 @@ for i in resultSP:
     </table>
     """
 
-    index+=2
+    indexSP+=2
 
-with open(f'rakuten-{weight}-pc.html','w',encoding='UTF-8') as file:
+with open(f'{path}\ rakuten-{weight}-pc.html','w',encoding='UTF-8') as file:
     file.write(templatePC)
 
-with open(f'rakuten-{weight}-sp.html','w',encoding='UTF-8') as file:
+with open(f'{path}\ rakuten-{weight}-sp.html','w',encoding='UTF-8') as file:
     file.write(templateSP)
-
-
