@@ -1,8 +1,12 @@
 import csv
-# 重量
-weight = '300g'
+import pathlib
+path = pathlib.Path(__file__).parent.absolute()
+print(path)
+
+##############  請先輸入   ##############
+weight = '3kg'
 date = '3/11 ~ 3/20'
-file = open(f'{weight}.csv', encoding='UTF-8')
+file = open(f'{path}\{weight}.csv',encoding='UTF-8')
 
 test = []
 result = []
@@ -107,8 +111,8 @@ for i in resultSP:
 
 
 
-with open(f'yahoo-{weight}-pc.html','w',encoding='UTF-8') as file:
+with open(f'{path}\ yahoo-{weight}-pc.html','w',encoding='UTF-8') as file:
     file.write(templatePC)
 
-with open(f'yahoo-{weight}-sp.html','w',encoding='UTF-8') as file:
+with open(f'{path}\ yahoo-{weight}-sp.html','w',encoding='UTF-8') as file:
     file.write(templateSP)
