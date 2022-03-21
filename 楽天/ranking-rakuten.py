@@ -1,10 +1,13 @@
 import csv
+import pathlib
+path = pathlib.Path(__file__).parent.absolute()
+print(path)
 
 ##############  請先輸入   ##############
 weight = '3kg'
 date ='3/1～3/10'
 
-file = open(f'{weight}.csv',encoding='UTF-8')
+file = open(f'{path}\{weight}.csv',encoding='UTF-8')
 test = []
 result = []
 resultSP = []
@@ -30,7 +33,6 @@ htmlSP= ''
 # PC
 index = 0
 for (index , i) in enumerate(result):
-    print(index)
     if index>4:
         break
     
