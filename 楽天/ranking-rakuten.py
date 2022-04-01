@@ -4,8 +4,8 @@ path = pathlib.Path(__file__).parent.absolute()
 print(path)
 
 ##############  請先輸入   ##############
-weight = '3kg'
-date ='3/11～3/20'
+weight = '300g'
+date ='3/21～3/31'
 
 file = open(f'{path}\{weight}.csv',encoding='UTF-8')
 test = []

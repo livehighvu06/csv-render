@@ -5,7 +5,7 @@ print(path)
 
 ##############  請先輸入   ##############
 weight = '3kg'
-date = '3/11 ~ 3/20'
+date = '3/21 ~ 3/31'
 file = open(f'{path}\{weight}.csv',encoding='UTF-8')
 
 test = []
@@ -19,13 +19,13 @@ for data in data_list:
     for i in data:
         n = i.split('プロテイン ')[-1].split(' ')[0]
         test.append(n)
-# print(test)
+
 for i in range(0,len(test),4):
     result.append(test[i:i+4])
 
 for i in range(0,len(test),8):
     resultSP.append(test[i:i+8])
-# print(result)
+
 
 htmlPC = ''
 htmlSP = ''
